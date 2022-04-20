@@ -4,7 +4,7 @@
  *@fc: a char to select respective function pointer
  *Return: a pointer to a function
  */
-int (*get_print_func(char fc))(va_list l, flags_t * f)
+int (*get_print_func(char fc))(va_list l, flags_t *f)
 {
 	int len, i;
 

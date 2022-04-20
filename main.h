@@ -20,7 +20,7 @@ typedef struct flags
 
 /**
  *struct print_func - struct to select specific print function
- *@print_ft: format specifier
+ *@ft: format specifier
  *@p_func: pinter to function
  */
 typedef struct print_func
@@ -29,7 +29,7 @@ typedef struct print_func
 	int (*p_func)(va_list l, flags_t *f);
 } pr_f;
 
-int (*get_print_func(char fc))(va_list l,flags_t *);
+int (*get_print_func(char fc))(va_list l, flags_t *);
 int get_flag(char s, flags_t *f);
 int _printf(const char *format, ...);
 
