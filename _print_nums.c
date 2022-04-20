@@ -43,6 +43,21 @@ void print_number(int n)
 		print_number(n1 / 10);
 	_putchar((n1 % 10) + '0');
 }
+/**
+ * print_unsigned - prints an unsigned integer
+ * @l: va_list of arguments from _printf
+ * @f: pointer to the struct flags determining
+ * if a flag is passed to _printf
+ * Return: number of char printed
+ */
+int print_unsigned(va_list l, flags_t *f)
+{
+	unsigned int u = va_arg(l, unsigned int);
+	char *str = convert(u, 10, 0);
+
+	(void)f;
+	return (_puts(str));
+}
 
 /**
  * count_digit - returns the number of digits in an integer
