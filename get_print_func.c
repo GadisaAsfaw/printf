@@ -19,10 +19,11 @@ int (*get_print_func(char fc))(va_list l, flags_t *f)
 		{'x', print_hex},
 		{'X', print_hex_big},
 		{'S', print_bigS},
+		{'p', print_address},
 	};
 
 	/*len = sizeof(func_arr) / sizeof(pr_f);*/
-	len = 10;
+	len = 11;
 	for (i = 0; i < len; i++)
 	{
 		if (func_arr[i].ft == fc)
